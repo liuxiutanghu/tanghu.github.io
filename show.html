@@ -79,7 +79,7 @@
   			$(this).addClass("topdiv_a");
   			top_li_i=$(this).parent().index();
   			var var_href=$(this).attr("var_href");
-  			$.post(var_href,"",function(result){
+  			$.get(var_href,"",function(result){
   				$("#middle_div").html(result);
   			});
   		});
