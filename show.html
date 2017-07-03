@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html>
-<script type="text/javascript" src="js/jquery1.8.js"></script></head>
+  <head>
+    <title>唐虎</title>
+	
+    <meta http-equiv="keywords" content="刘秀,唐虎,liuxiu,tanghu">
+    <meta http-equiv="description" content="个人博客">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <script type="text/javascript" src="js/jquery1.8.js"></script></head>
   <style>
   	body{
   		margin:0px;
   		padding:0px;
   	}
+  	/* 头部样式  */
   	#top_div{
   		width: 100%;
   		height: 75px;
@@ -35,6 +42,19 @@
   		border-radius:8px;/* 圆角 */
   		background-color: #000;
   	}
+  	/* 中间样式  */
+  	#middle_div{
+  		width: 100%;
+  		height:492px;
+  	}
+  	/* 底部样式  */
+  	#below_div{
+  		width: 100%;
+  		height: 75px;
+  		margin:0px;
+  		padding:0px;
+  		background-color:#222;
+  	}
   </style>
   <script>
   	/*头部li样式*/
@@ -58,6 +78,10 @@
   			$("#top_div ul li a").removeClass("topdiv_a");
   			$(this).addClass("topdiv_a");
   			top_li_i=$(this).parent().index();
+  			var var_href=$(this).attr("var_href");
+  			$.post(var_href,"",function(result){
+  				$("#middle_div").html(result);
+  			});
   		});
   	});
   </script>
@@ -65,9 +89,9 @@
    <div id="div">
 	   	<div id="top_div">
 	   		<ul>
-	   			<li><a var_href="index.html" >首页</a></li>
-	   			<li><a var_href="index.html">资料下载</a></li>
-	   			<li><a var_href="index.html">资料列表</a></li>
+	   			<li><a var_href="Home_Page.html" >首页</a></li>
+	   			<li><a var_href="Download.html">资料下载</a></li>
+	   			<li><a var_href="Resource_List.html">资料列表</a></li>
 	   		</ul>
 	   	</div>
 	   	<div id="middle_div">
