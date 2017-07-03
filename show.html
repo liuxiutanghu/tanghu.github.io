@@ -1,12 +1,81 @@
 <!DOCTYPE html>
 <html>
-<body>
- <script src='js/jquery1.8.js'></script>
+<script type="text/javascript" src="js/jquery1.8.js"></script></head>
+  <style>
+  	body{
+  		margin:0px;
+  		padding:0px;
+  	}
+  	#top_div{
+  		width: 100%;
+  		height: 75px;
+  		margin:0px;
+  		padding:0px;
+  		background-color:#222;
+  	}
+  	#top_div ul{
+  		margin:0px;
+  		padding:0px;
+  		padding-left: 200px;
+  	}
+  	#top_div ul li{
+  		float:left;
+  		list-style-type: none;
+  		padding: 10px;
+  		color: white;
+  		font-size: 20px;
+  		margin: 15px;
+  	}
+  	#top_div ul li a{
+  		color: white;
+  		text-decoration: none;
+  		padding: 15px;
+  	}
+  	.topdiv_a{
+  		border-radius:8px;/* 圆角 */
+  		background-color: #000;
+  	}
+  </style>
   <script>
-    $(function(){
-      alert(1);
-    })
+  	/*头部li样式*/
+  	var top_li_i=0;
+  	
+  	/* 窗体加载 */
+  	$(function(){
+  		$("#top_div ul li a:eq(0)").addClass("topdiv_a");
+  		/* 头部移入移出 */
+  		$("#top_div ul li a").mouseover(function(){
+  			$("#top_div ul li a").removeClass("topdiv_a");
+  			$(this).addClass("topdiv_a");
+  			$("#top_div ul li a:eq("+top_li_i+")").addClass("topdiv_a");
+  		});
+  		$("#top_div ul li a").mouseout(function(){
+  			$("#top_div ul li a").removeClass("topdiv_a");
+  			$("#top_div ul li a:eq("+top_li_i+")").addClass("topdiv_a");
+  		});
+  		/* 头部点击切换 */
+  		$("#top_div ul li a").click(function(){
+  			$("#top_div ul li a").removeClass("topdiv_a");
+  			$(this).addClass("topdiv_a");
+  			top_li_i=$(this).parent().index();
+  		});
+  	});
   </script>
-<h1>11111</h1>
-</body>
+  <body>
+   <div id="div">
+	   	<div id="top_div">
+	   		<ul>
+	   			<li><a var_href="index.html" >首页</a></li>
+	   			<li><a var_href="index.html">资料下载</a></li>
+	   			<li><a var_href="index.html">资料列表</a></li>
+	   		</ul>
+	   	</div>
+	   	<div id="middle_div">
+	   		
+	   	</div>
+	   	<div id="below_div">
+	   		
+	   	</div>
+   </div>
+  </body>
 </html>
