@@ -115,23 +115,17 @@ float: left; width: 100%; min-height: 330px;
 	font-size: 14px;
 	height:330px;
 	width:100%;
-	
-	width:100%;height:100%;
+	width:100%;
+	height:100%;
 	text-align: center;
 }
-.opposite-content-text_bcColor #homepage_div{
-	position: absolute;
-	/*  background-color: rgba(218, 226, 218, 0.38);*/
+ #homepage_div{
 	width: 100%;
-    height: 30px;
-    margin: 50px auto;
-    margin-top:100px;
+	height: 200px;
+    margin: 40px auto;
+    padding-top:50px;
     line-height: 30px; /*设置line-height与父级元素的height相等*/
     text-align: center; /*设置文本水平居中*/
-    overflow: hidden; /*防止内容超出容器或者产生自动换行*/
-}
-#homepage_div{
-	height: 200px;
 }
 .my_text{
 	margin-left: 30px;
@@ -143,8 +137,45 @@ float: left; width: 100%; min-height: 330px;
 	color:#3F3E3C;
 	font: 16px "宋体";
 }
+.my_right_text{
+	margin-top:30px;
+	margin-left: 30px;
+	width:95%;
+	border:1px solid #222; 
+	background-color: #222;
+	border-radius:8px;/* 圆角 */
+	padding-left: 5px;
+	color:#89919A;
+	font: 16px "宋体";
+}
+.my_right_text li{
+	margin-bottom: 10px;
+	    font-size: 15px;
+	    color: white;
+	
+}
+.my_right_text ol{
+	margin-right: 15px;
+}
 .my_text div{
 	margin: 20px;
 	color:#89919A;
 	line-height: 40px;
+}
+.home_page_border{
+	/* border:2px solid red; */	
+	width: 0px;
+	height: 600px;
+	margin-top: 30px;
+}
+.home_page_text_div{
+	margin-top:30px;
+	width: 100%;
+}
+.home_page_text_div_01{
+	margin-bottom: 30px;
+	width: 100%;
+	border-radius:8px;
+	background-color: #222;
+	overflow: hidden;
 }
